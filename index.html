@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Animation</title>
+<style>
+body{
+margin:0;
+overflow:hidden;
+background:linear-gradient(#03152b,#5c8ed8);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+}
+
+.mountain{
+position:absolute;
+bottom:0;
+width:50%;
+height:55%;
+background:#222;
+clip-path:polygon(0 100%,50% 20%,100% 100%);
+}
+
+.left{left:0;}
+.right{right:0;}
+
+.sun{
+position:absolute;
+bottom:20%;
+left:50%;
+transform:translateX(-50%);
+width:120px;
+height:120px;
+border-radius:50%;
+background:gold;
+box-shadow:0 0 60px gold;
+animation:sunrise 5s forwards;
+}
+
+@keyframes sunrise{
+0%{bottom:10%;}
+100%{bottom:60%;}
+}
+
+.message{
+position:absolute;
+font-size:34px;
+color:white;
+text-align:center;
+opacity:0;
+padding:20px;
+animation:show 2s forwards;
+animation-delay:6s;
+text-shadow:0 0 15px cyan;
+}
+
+@keyframes show{
+from{opacity:0;transform:scale(.5);}
+to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="mountain left"></div>
+<div class="mountain right"></div>
+<div class="sun"></div>
+
+<div class="message">
+💥<br><br>
+No matter whether you love me or not,<br>
+I'll always keep loving you.<br><br>
+💋🩵🖤
+</div>
+
+</body>
+</html>
